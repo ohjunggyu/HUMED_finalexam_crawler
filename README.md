@@ -1,14 +1,13 @@
-# finalexam-questioncollector-js
+# HUMED_finalexam_crawler
+헝가리 의대에서 보는 최종시험에서는 문제은행형식으로 문제들이 제공됩니다.
+이걸 크롤링해와서 보기좋게 만들고 txt 파일로 자동으로 다운로드 되게 합니다.
 
-At the end of studies in general medicine, dentistry, and pharmacology in Hungary, a written national "final exam" must be taken. This is a multiple choice question-based exam, and the questions are provided to the students ahead of time at the website finalexam.hu. However, on the website the questions are displayed 20 at a time, and at the time of writing (april 2022) there are 4575 questions. Having the questions in a text-based format allows for printing and easier creation of flashcards, etc.
-
-This short javascript snippet takes each page of 20 questions, copies the question stem, answer, and explanation for each question, and creates a blob textfile from which the questions can be copy pasted into a document. It's probably trivial for someone with more programming experience than me to further modify the script to automate the process further, for example so that it iterates through every page automatically.
-
-# Usage
-
-1. Log into finalexam.hu (creating a user is free and does not require proving student status)
-2. Open the question list and navigate to one of the pages with questions.
-3. Copy paste the script into the console (right click -> inspect -> console (in chromium-based browsers) and execute it
-4. A new tab will open with the questions from that page. Copy and paste them to a separate document (and add a newline (press enter))
-5. Navigate to the next page with questions. Rerun the script (arrow up + enter reruns the previous command)
-6. Repeat until finished
+# 사용방법
+1. finalexam.hu 에 접속합니다.
+2. question list에 접속합니다.
+3. 크롤링을 원하는 페이지에 들어가 문제들이 나열된 상태의 페이지를 켭니다.
+4. f12를 눌러 개발자 도구를 켭니다.
+5. 개발자 도구 상단 탭에서 console 을 누릅니다.
+6. > 이라고 되어있는 부분 아래에 QuestionCollector.js 안에 있는 코드를 붙여넣습니다.
+7. 콘솔이 꺼지지 않는 한 매번 전체 코드를 붙여넣을 필요 없이 crawlAllPages(); 만 입력해도 크롤링이 됩니다.
+8. 잘 쓰십쇼
